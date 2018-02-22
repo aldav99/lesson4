@@ -10,9 +10,7 @@ class Station
   def add_train(train)
     @trains << train
   end
-  def list_of_trains
-    @trains.each {|train| puts train.name } 
-  end
+
   def delete_train(train)
     @trains.delete(train)
   end

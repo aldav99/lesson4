@@ -19,10 +19,7 @@ class Route
   end
   
   def delete_station(name)
-    if (start.name == name || terminate.name == name)
-      return false
-    else  
-      @stations.delete_if {|station| station.name == name }
-    end
+    return if start.name == name || terminate.name == name
+    @stations.delete_if {|station| station.name == name }
   end
 end
